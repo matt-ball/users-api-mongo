@@ -1,0 +1,28 @@
+{
+  "name": "users-api-mongo",
+  "version": "0.0.1",
+  "description": "A basic CRUD API to manage users in a system.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-ball/users-api-mongo.git"
+  },
+  "author": "Matt Ball",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matt-ball/users-api-mongo/issues"
+  },
+  "homepage": "https://github.com/matt-ball/users-api-mongo#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
