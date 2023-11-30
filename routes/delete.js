@@ -5,9 +5,9 @@ const router = express.Router()
 router.delete('/', deleteUser)
 
 async function deleteUser(req, res) {
-  const { id } = req.query
-  const user = await User.findByIdAndDelete(id)
-  res.json(user)
+  const ids = req.query.ids.split(',')
+  const deletedUsers = await User.deleteMany({ _id: { $in: ids }})
+  res.json(deletedUsers)
 }
 
 module.exports = router
