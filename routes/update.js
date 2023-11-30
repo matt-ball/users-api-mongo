@@ -6,7 +6,7 @@ router.patch('/', updateUser)
 
 async function updateUser(req, res) {
   const { id } = req.query
-  const user = await User.findByIdAndUpdate(id, req.body, { new: true })
+  const user = await User.findByIdAndUpdate(id, req.body, { new: true }) // returns the updated user
   res.json(user)
 }
 

@@ -6,8 +6,14 @@ router.get('/', getUser)
 
 async function getUser(req, res) {
   const { id } = req.query
-  const user = await User.findById(id)
-  res.json(user)
+
+  if (id) {
+    const user = await User.findById(id)
+    res.json(user)
+  } else {
+    const users = await User.find()
+    res.json(users)
+  }
 }
 
 module.exports = router
